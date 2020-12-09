@@ -36,7 +36,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     updated_at = models.DateTimeField(auto_now=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELD = []
 
     objects = UserManager()
 
@@ -50,6 +50,6 @@ class User(AbstractBaseUser, PermissionsMixin):
             'access': str(refresh.access_token)
         } """
         return ''
-    
+    #./manage.py createsuperuser --username dix --password 123456  --email 'dixxx@yopmail.com'
 
     
